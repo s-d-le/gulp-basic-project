@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     util = require('gulp-util'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
-    jade = require('gulp-jade'),
+    pug = require('gulp-pug'),
     watch = require('gulp-watch'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -26,15 +26,17 @@ var bases = {
 var files = {
     scripts: [
         bases.src+'scripts/main.js',
-        bases.src+'scripts/**/*.js'
+        bases.src+'scripts/**/*.js',
+        bases.src+'controllers/angular.js',
+        bases.src+'controllers/**/*.js',
     ],
     styles: [
         bases.src+'styles/main.scss',
         bases.src+'styles/**/*.scss',
     ],
     views: [
-        bases.src+'views/*.jade',
-        bases.src+'views/**/*.jade',
+        bases.src+'views/*.pug',
+        bases.src+'views/**/*.pug',
     ],
     images: [
         bases.src+'lib/images/*.{gif,jpg,png,svg}',
@@ -44,17 +46,16 @@ var files = {
         scripts: [
             bases.bower+'jquery/dist/jquery.min.js',
             bases.bower+'jquery-ui/jquery-ui.min.js',
-            // bases.bower+'angular/angular.min.js',
+            bases.bower+'angular/angular.min.js',
             bases.bower+'bootstrap/dist/js/bootstrap.min.js',
             bases.bower+'parallax.js/parallax.min.js',
-            // bases.bower+'smooth-scroll/smooth-scroll.min.js',
-            // bases.src+'lib/js/*.js'
+            bases.bower+'**/*.min.js',
+            bases.src+'lib/js/*.js'
         ],
         styles: [
             bases.bower+'bootstrap/dist/css/bootstrap.min.css',
             bases.src+'lib/css/*.css',
             bases.bower+'hover/css/hover-min.css',
-            // bases.bower+'slick-carousel/slick/slick.css'
         ],
         fonts: [
             bases.bower+'bootstrap/dist/fonts/*.{eot,svg,ttf,woff,woff2}',
@@ -64,15 +65,12 @@ var files = {
 };
 
 /** 
- *  Handler
- */
-
-/** 
- *  Lib build! Run once, unless update
+ *  Lib build! Run once, unless files updated
  */
 
 gulp.task('lib-scripts', function() {
     return gulp.src(files.lib.scripts)
+        .gulp.src(files.scripts)
         .pipe(concat('lib.script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(bases.dist+'lib/scripts/'));
@@ -109,7 +107,7 @@ gulp.task('views', function() {
             this.emit('end');
             util.beep();
         }}))
-    .pipe(jade({ 
+    .pipe(pug({ 
         layout: false,
         pretty: true 
     }))
@@ -117,7 +115,7 @@ gulp.task('views', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('jade-watch', ['views'], browserSync.reload);
+gulp.task('pug-watch', ['views'], browserSync.reload);
 
 gulp.task('styles', function(){
     return gulp.src(files.styles)
@@ -182,5 +180,5 @@ gulp.task('init', function () {
 gulp.task('default', ['server', 'styles', 'views'], function(){
     gulp.watch(bases.src+"/styles/**/*.scss", ['styles']);
     gulp.watch(bases.src+"/scripts/**/*.js", ['scripts']);
-    gulp.watch(bases.src+"/views/**/*.jade", ['jade-watch']);
+    gulp.watch(bases.src+"/views/**/*.pug", ['pug-watch']);
 });

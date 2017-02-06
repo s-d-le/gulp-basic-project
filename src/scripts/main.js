@@ -1,21 +1,5 @@
 $(document).ready(function() {
-    console.log('All set!');
 
-    /*--------------Smooth Scroll--------------*/
-
-    $(function() {
-        $('a[href*="#"]:not([href="#"]):not(.no-smooth-scroll)').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
+    console.log("jQuery version: " + $().jquery);
 
 })

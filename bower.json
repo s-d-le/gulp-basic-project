@@ -1,6 +1,6 @@
 {
-  "name": "kpn-play",
-  "description": "A Gulp file and project generator.",
+  "name": "gulp-basic-project",
+  "description": "A gulp bare minimum project",
   "main": "gulpfile.js",
   "authors": [
     "Son Le"
@@ -18,7 +18,8 @@
   ],
   "dependencies": {
     "jquery": "~2.2.2",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular": "^1.6.1"
   },
   "devDependencies": {
     "jquery-ui": "^1.11.4",
