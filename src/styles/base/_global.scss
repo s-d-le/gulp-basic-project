@@ -1,0 +1,266 @@
+/* Global Styles
+   ========================================================================== */
+
+// @font-face {
+//     font-family: "KPN Sans Regular";
+//     src: url("../lib/fonts/KPN-Sans-Normal.woff") format("woff");
+// }
+
+html, body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration:none;
+    &:hover, 
+    &:focus,
+    &:visited {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+b {
+
+}
+
+i {
+    line-height: 0;
+    outline: none;
+
+    &::before {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-perspective: 1000;
+    }
+}
+
+label {
+    font-weight: 300;
+}
+
+button {
+    outline: none;
+}
+
+/*
+ *  Bootstrap overide
+*/
+
+.container-fluid {
+  padding: 0;
+}
+
+.panel {
+    margin: 0;
+    background: none;
+    border: none;
+
+    .panel-heading {
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    .panel-body {
+        padding: 0;
+    }
+}
+
+.text-center {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset!important;
+}
+
+/**
+ *  Helpers
+ *  For lazy semi-inline styling or jquery class toggling
+ */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.gone {
+    display: none!important;
+}
+
+.none {
+    display: none;
+}
+
+.here {
+    display: inherit;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.top-0 {
+    top: 0!important;
+}
+
+.no-marg {
+    margin: 0;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.lpad0 {
+    padding-left: 0;
+}
+
+.lpad10 {
+    padding-left: 10px;
+}
+
+.lpad15 {
+    padding-left: 15px;
+}
+
+.lpad20 {
+    padding-left: 20px;
+}
+
+.lpad30 {
+    padding-left: 30px;
+}
+
+.rpad0 {
+    padding-right: 0;
+}
+
+.rpad30 {
+    padding-right: 30px;
+}
+
+.tmarg5 {
+    margin-top: 5px;
+}
+
+.tmarg25 {
+    margin-top: 25px;
+}
+
+.bmarg10 {
+    margin-bottom: 10px;
+}
+
+.bmarg14 {
+    margin-bottom: 14px;
+}
+
+.bmarg15 {
+    margin-bottom: 15px;
+}
+
+.bmarg20 {
+    margin-bottom: 20px;
+}
+
+.bmarg25 {
+    margin-bottom: 25px;
+}
+
+.bmarg30 {
+    margin-bottom: 30px;
+}
+
+.bmarg40 {
+    margin-bottom: 40px;
+}
+
+.bmarg50 {
+    margin-bottom: 50px;
+}
+
+.bmarg60 {
+    margin-bottom: 60px;
+}
+
+.lmarg0 {
+    margin-left: 0;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/*
+ *  Vertical align
+*/
+
+.v-align-item {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.v-align {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.v-align-top {
+    transform: translateY(100%);
+    align-self: flex-start;
+}
+
+.v-align-bot {
+    transform: translateY(-100%);
+    display: inline-block;
+}

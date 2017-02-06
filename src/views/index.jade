@@ -1,0 +1,143 @@
+extends navbar
+
+block content
+
+    section#one.parallax-window(data-parallax="scroll" data-image-src="../images/lor.jpg")
+        #one-chev
+            .chev-1
+            .chev-2
+            .chev-3
+
+    section#two.fs
+        .container
+            .row.wrapper
+                .col-lg-12.text-center
+                    h2 What we do
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quidem sint, fugit, cumque nihil earum voluptas dicta.
+            .row
+                .col-lg-4.bmarg30
+                    .box-wrapper(type="button" data-toggle="modal" data-target="#modal-latijn")
+                        .box
+                            .box-border
+                            img(src="../images/rome.jpg", alt="")
+                            .caption
+                                span.title Label
+                    .modal.modal-fullscreen.fade#modal-latijn(tabindex="-1" role="dialog" aria-labelledby="latijnLabel" aria-hidden="true")
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button(type="button" class="close" data-dismiss="modal")
+                                        span.close-hair
+                                    h2.modal-title#latijnLabel Modal label                                
+                                .modal-body
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit vitae impedit modi, sapiente doloribus inventore, expedita, hic, voluptatem commodi laudantium explicabo nesciunt. Quaerat quisquam, esse unde rerum optio ducimus.
+
+                .col-lg-4.bmarg30
+                    .box-wrapper(type="button" data-toggle="modal" data-target="#modal-grieks")
+                        .box
+                            img(src="../images/greece.jpg", alt="")
+                            .caption
+                                span.title A very large label
+                    .modal.modal-fullscreen.fade#modal-grieks(tabindex="-1" role="dialog" aria-labelledby="grieksLabel" aria-hidden="true")
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button(type="button" class="close" data-dismiss="modal")
+                                        span.close-hair
+                                    h2.modal-title#grieksLabel Modal label                                
+                                .modal-body
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repudiandae, odio a necessitatibus eos quidem odit at id vero, officia dicta officiis illum. Sequi dolore dicta, animi tenetur ipsa commodi! <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ad et vero ut alias nobis atque fugiat non, repellendus nemo tempore dolore quaerat eligendi, blanditiis rerum perferendis optio inventore veniam.
+
+                .col-lg-4.bmarg30
+                    .box-wrapper(type="button" data-toggle="modal" data-target="#modal-andere")
+                        .box
+                            img(src="../images/rotterdam.jpg", alt="")
+                            .caption
+                                span.title Label
+                    .modal.modal-fullscreen.fade#modal-andere(tabindex="-1" role="dialog" aria-labelledby="andereLabel" aria-hidden="true")
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button(type="button" class="close" data-dismiss="modal")
+                                        span.close-hair
+                                    h2.modal-title#andereLabel Modal label
+                                .modal-body
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sit dolores deleniti accusamus odio vero doloribus reiciendis, sequi eius vitae ipsa reprehenderit expedita? Consequuntur veritatis qui sit, sint possimus expedita! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum provident soluta esse possimus saepe in consequuntur iusto eveniet aliquid, cum, omnis non, earum labore reprehenderit blanditiis ex quia velit autem.
+            .row.bmarg60
+                .col-lg-4.col-lg-offset-2.bmarg30
+                    .box-wrapper(type="button" data-toggle="modal" data-target="#modal-huiswerk")
+                        .box
+                            img(src="../images/rotterdam_2.jpg", alt="")
+                            .caption
+                                span.title Label
+                    .modal.modal-fullscreen.fade#modal-huiswerk(tabindex="-1" role="dialog" aria-labelledby="huiswerkLabel" aria-hidden="true")
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button(type="button" class="close" data-dismiss="modal")
+                                        span.close-hair
+                                    h2.modal-title#huiswerkLabel Modal label
+                                .modal-body
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae unde non voluptatibus excepturi omnis, pariatur, rerum expedita obcaecati laborum in eligendi suscipit perspiciatis aspernatur quis cumque. Consequuntur eaque, dolorum beatae.
+
+                .col-lg-4
+                    .box-wrapper(type="button" data-toggle="modal" data-target="#modal-tarieven")
+                        .box
+                            img(src="../images/venice.jpg", alt="")
+                            .caption
+                                span.title Table
+                    .modal.modal-fullscreen.fade#modal-tarieven(tabindex="-1" role="dialog" aria-labelledby="tarievenLabel" aria-hidden="true")
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button(type="button" class="close" data-dismiss="modal")
+                                        span.close-hair
+                                    h2.modal-title#tarievenLabel Table example
+                                .modal-body
+                                    table.tarief.bmarg30
+                                        tbody
+                                            tr
+                                                td Private session
+                                                td 
+                                                    span.price &euro;25 
+                                                    | per uur
+                                            tr
+                                                td Try out
+                                                td 
+                                                    span.price &euro;20 
+                                                    | per uur
+                                            tr
+                                                td &nbsp;
+                                            tr
+                                                td Personal support
+                                                td 
+                                                    span.price &euro;20 
+                                                    | per uur
+                                            tr
+                                                td 1 uur bijles en 1 uur huiswerkbegeleiding
+                                                td 
+                                                    span.price &euro;40 
+
+                                    p.bmarg20 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque totam inventore nostrum adipisci quia incidunt quod distinctio ab fugiat, voluptate rerum sit nihil voluptas harum repellat vel, exercitationem tempore.
+
+    section#three.parallax-window(data-parallax="scroll" data-image-src="../images/england.jpg")
+        .container
+            .row.wrapper
+                .col-lg-8.col-lg-offset-2.text-center
+                    .align
+                        h2 About us
+                        p.white Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corporis, porro, dolor animi inventore eos? Sapiente nihil repellat aspernatur molestias explicabo facere, voluptas adipisci id pariatur et ipsa? Laborum, provident!
+
+
+    section#four.fs.black
+        .container
+            .row.wrapper
+                .col-lg-12.text-center
+                    h2 CONTACT
+                    a.email(href="mailto:info@lesstofrotterdam.nl" target="_top") 
+                        i.fa.fa-envelope-o 
+                        | &nbsp;contact@sonle.nl
+                    p.email 
+                        i.fa.fa-phone(aria-hidden="true")
+                        | &nbsp;+31 6 10 41 60 91
+    include footer

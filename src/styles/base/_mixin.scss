@@ -1,0 +1,22 @@
+/**
+ *  Mixin
+ *
+ */
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+}
+
+/**
+ *  Mini player
+ *
+ */
+
+// .mini-player {
+//     @include calc(width, "100% - " + $nav_width);
+// }
+
+// .fav-tile-container {
+//     @include calc(padding-left, "6% - " + $fav_tile_width / 2 + " + " + $number_of_tiles / 2);
+// }
